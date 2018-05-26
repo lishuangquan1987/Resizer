@@ -1,0 +1,60 @@
+﻿<Window x:Class="ResizerTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ResizerTest"
+        xmlns:resizer="clr-namespace:Resizer;assembly=Resizer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None" >
+    <!--<Grid>
+        <Border Height="200" Width="200" BorderBrush="Red" BorderThickness="1">
+            <resizer:ResizerControl Origenation="Horizontal"  HorizontalAlignment="Right" Width="10" Background="Blue"></resizer:ResizerControl>
+        </Border>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="622,282,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+    </Grid>-->
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3"/>
+            <RowDefinition/>
+            <RowDefinition Height="3"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="3"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle x:Name="left" Grid.Row="1" Grid.Column="0" Opacity="0.1">
+            <Rectangle.Fill>
+                <SolidColorBrush/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="right" Grid.Row="1" Grid.Column="2">
+            <Rectangle.Fill>
+                <SolidColorBrush/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="up" Grid.Row="0" Grid.Column="1">
+            <Rectangle.Fill>
+                <SolidColorBrush/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="down" Grid.Row="2" Grid.Column="1">
+            <Rectangle.Fill>
+                <SolidColorBrush/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="leftdown" Grid.Row="2" Grid.Column="0">
+            <Rectangle.Fill>
+                <SolidColorBrush/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="rightdown" Grid.Row="2" Grid.Column="2">
+            <Rectangle.Fill>
+                <SolidColorBrush/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="306,187,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+    </Grid>
+</Window>
